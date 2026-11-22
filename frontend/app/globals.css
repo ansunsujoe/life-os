@@ -1,0 +1,50 @@
+body {
+  background: var(--mantine-color-body);
+}
+
+.timeline-track {
+  position: relative;
+  height: 44px;
+  border-radius: var(--mantine-radius-sm);
+  background: light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-6));
+  overflow: hidden;
+}
+
+.timeline-block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  min-width: 2px;
+  cursor: pointer;
+  transition: filter 120ms ease;
+}
+
+.timeline-block:hover {
+  filter: brightness(1.15);
+}
+
+.timeline-block.inferred {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.28) 0 4px,
+    transparent 4px 8px
+  );
+}
+
+.timeline-marker {
+  position: absolute;
+  top: -4px;
+  width: 2px;
+  height: 52px;
+  background: light-dark(var(--mantine-color-dark-4), var(--mantine-color-gray-4));
+  opacity: 0.7;
+}
+
+.stack-bar {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  flex-direction: column-reverse;
+}
